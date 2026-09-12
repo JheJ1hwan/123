@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Pop Korean One-Day Class</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Noto Sans KR",sans-serif;background:#f7f7fb;color:#222}
+.container{max-width:900px;margin:auto;padding:45px 20px 70px}
+h1{text-align:center;font-size:34px;margin:0 0 10px}
+.subtitle{text-align:center;color:#777;margin-bottom:40px}
+h2{margin:42px 0 18px;font-size:23px}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{height:145px;perspective:1000px;cursor:pointer}
+.card-inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.card.flipped .card-inner{transform:rotateY(180deg)}
+.card-front,.card-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.card-front{background:#fff}
+.card-back{background:#222;color:#fff;transform:rotateY(180deg)}
+.korean{font-size:22px;font-weight:bold;margin-bottom:8px}
+.pronunciation{font-size:13px;color:#999}
+.card-back .chinese{font-size:22px;font-weight:bold}
+.card-back .note{font-size:13px;margin-top:7px;color:#bbb}
+.sentence-box{background:#fff;padding:25px;margin-bottom:14px;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.06);font-size:20px}
+input{width:145px;border:none;border-bottom:2px solid #333;outline:none;font-size:20px;text-align:center;padding:5px;background:transparent}
+.translation{margin-top:10px;font-size:14px;color:#888}
+.hint{text-align:center;color:#999;margin-top:22px;font-size:14px}
+@media(max-width:650px){.card-grid{grid-template-columns:repeat(2,1fr)}h1{font-size:28px}}
+@media(max-width:430px){.card-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="subtitle">点击卡片查看中文意思</div>
+
+<h2>1.</h2>
+<div class="card-grid">
+<div class="card" onclick="flipCard(this)">
+<div class="card-inner">
+<div class="card-front">
+<div class="korean">네</div>
+<div class="pronunciation">nae</div>
+</div>
+<div class="card-back"><div class="chinese">是 / 好</div></div>
+</div>
+</div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">안녕하세요</div><div class="pronunciation">an nyeong ha se yo</div></div><div class="card-back"><div class="chinese">你好</div></div></div></div>
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">아니요</div><div class="pronunciation">a ni yo</div></div><div class="card-back"><div class="chinese">不是 / 不</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">진짜</div><div class="pronunciation">jin jja</div></div><div class="card-back"><div class="chinese">真的</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">대박</div><div class="pronunciation">dae bak</div></div><div class="card-back"><div class="chinese">哇塞 / 太厉害了</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">ㅋㅋ</div><div class="pronunciation">keu keu</div></div><div class="card-back"><div class="chinese">哈哈</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">ㅜㅜ / ㅠㅠ</div><div class="pronunciation">u u / yu yu</div></div><div class="card-back"><div class="chinese">呜呜 / 😭</div></div></div></div>
+</div>
+
+<h2>2.</h2>
+<div class="card-grid">
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">귀여워</div><div class="pronunciation">gwi yeo wo</div></div><div class="card-back"><div class="chinese">可爱</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">예뻐</div><div class="pronunciation">ye ppeo</div></div><div class="card-back"><div class="chinese">漂亮</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">멋있어</div><div class="pronunciation">meo si sseo</div></div><div class="card-back"><div class="chinese">酷 / 帅</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">잘생겼어</div><div class="pronunciation">jal saeng gyeo sseo</div></div><div class="card-back"><div class="chinese">帅</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">너무</div><div class="pronunciation">neo mu</div></div><div class="card-back"><div class="chinese">非常 / 太</div></div></div></div>
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">미쳤다</div><div class="pronunciation">mi chyeot da</div></div><div class="card-back"><div class="chinese">疯了 / 绝了</div></div></div></div>
+</div>
+
+<h2>3.</h2>
+<div class="card-grid">
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">보고 싶다</div><div class="pronunciation">bo go sip da</div></div><div class="card-back"><div class="chinese">想见 / 想念</div></div></div></div>
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">최애</div><div class="pronunciation">choe ae</div></div><div class="card-back"><div class="chinese">最爱 / 本命</div></div></div></div>
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">차애</div><div class="pronunciation">cha ae</div></div><div class="card-back"><div class="chinese">第二喜欢</div></div></div></div>
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">직캠</div><div class="pronunciation">jik kaem</div></div><div class="card-back"><div class="chinese">直拍</div></div></div></div>
+
+<div class="card" onclick="flipCard(this)"><div class="card-inner"><div class="card-front"><div class="korean">다음에</div><div class="pronunciation">da eu me</div></div><div class="card-back"><div class="chinese">下次</div></div></div></div>
+
+</div>
+
+<h2>造句</h2>
+<div class="sentence-box">내 최애는 <input type="text"> 예요.<div class="translation">我最喜欢的成员是 ____。</div></div>
+<div class="sentence-box"><input type="text"> 진짜 귀여워요.<div class="translation">____ 真的很可爱。</div></div>
+<div class="sentence-box"><input type="text"> 너무 좋아요.<div class="translation">我非常喜欢 ____。</div></div>
+<div class="sentence-box">콘서트 가고 싶어요.<div class="translation">我想去演唱会。</div></div>
+<div class="hint">💡 빈칸에 좋아하는 아이돌의 이름을 넣어 보세요!</div>
+</div>
+<script>
+function flipCard(card){card.classList.toggle("flipped")}
+</script>
+</body>
+</html>

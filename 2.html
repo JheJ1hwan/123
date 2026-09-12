@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    background:#f7f7fb;
+    color:#222;
+    font-family:Arial,"Noto Sans KR",sans-serif;
+}
+.container{
+    max-width:900px;
+    margin:0 auto;
+    padding:35px 20px 60px;
+}
+.word-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+.word-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px 28px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+.korean{
+    font-size:25px;
+    font-weight:700;
+    line-height:1.45;
+    margin-bottom:8px;
+}
+.chinese{
+    font-size:16px;
+    color:#888;
+    line-height:1.5;
+}
+@media(max-width:600px){
+    .container{padding:25px 15px 45px}
+    .word-card{padding:22px}
+    .korean{font-size:22px}
+    .chinese{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="word-list">
+
+<div class="word-card">
+    <div class="korean">저는 중국에서 왔어요</div>
+    <div class="chinese">我来自中国</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">너무 떨려요</div>
+    <div class="chinese">（我）很紧张</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">오늘 너무 멋있어요</div>
+    <div class="chinese">今天真的很酷 / 帅</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">데뷔 때부터 좋아했어요</div>
+    <div class="chinese">从出道开始就喜欢了</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">중국 팬이에요</div>
+    <div class="chinese">（我）是中国粉丝</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">같이 사진 찍어도 될까요?</div>
+    <div class="chinese">可以一起合影 / 拍照吗？</div>
+</div>
+
+<div class="word-card">
+    <div class="korean">오랜만이에요</div>
+    <div class="chinese">好久不见</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
